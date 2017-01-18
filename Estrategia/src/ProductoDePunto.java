@@ -1,0 +1,22 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author subzero
+ */
+public class ProductoDePunto implements ModoProducto{
+    DatoCompuesto este;
+
+    ProductoDePunto(DatoCompuesto in){
+        this.este=in;
+    }
+    @Override
+    public DatoCompuesto producto(DatoCompuesto otro) {
+        return new Punto(this.este.valor1*otro.valor1,this.este.valor2*otro.valor2);
+    }
+    
+}

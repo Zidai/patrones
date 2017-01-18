@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
+  <channel>
+    <title>RSS subzero</title>
+    <link>http://localhost:5000</link>
+    <description>RSS de subzero</description>
+    <language>es-MX</language>
+    <item>
+      <title>Niï¿½os del Estado Islï¿½mico asesinan a 25 soldados sirios</title>
+      <link>http://www.eluniversal.com.mx/el-mundo/2015/ninios-del-estado-islamico-asesinan-a-25-soldados-sirios-1111830.html</link>
+      <guid>http://www.eluniversal.com.mx/el-mundo/2015/ninios-del-estado-islamico-asesinan-a-25-soldados-sirios-1111830.html</guid>
+      <pubDate>2015-07-04 12:27:00</pubDate>
+      <description>Yihadistas publican video donde aparecen las vï¿½ctimas de rodillas y en fila en el escenario del teatro romano de Palmira</description>
+    </item>
+    <item>
+      <title>Fidel reaparece en reuniï¿½n de maestros queseros</title>
+      <link>http://www.eluniversal.com.mx/el-mundo/2015/fidel-reaparece-en-reunion-de-maestros-queseros-1111829.html</link>
+      <guid>http://www.eluniversal.com.mx/el-mundo/2015/fidel-reaparece-en-reunion-de-maestros-queseros-1111829.html</guid>
+      <pubDate>2015-07-04 11:46:00</pubDate>
+      <description>Sostuvo un amplio intercambio de mï¿½s de cuatro horas con 19 maestros queseros en un instituto en el poblado del Guatao</description>
+    </item>
+    <item>
+      <title>Van 59 muertos en el ï¿½ltimo naufragio en Filipinas</title>
+      <link>http://www.eluniversal.com.mx/el-mundo/2015/van-59-muertos-en-el-ultimo-naufragio-en-filipinas-1111826.html</link>
+      <guid>http://www.eluniversal.com.mx/el-mundo/2015/van-59-muertos-en-el-ultimo-naufragio-en-filipinas-1111826.html</guid>
+      <pubDate>2015-07-04 02:30:00</pubDate>
+      <description>La Policï¿½a de Ormoc, ciudad portuaria de la provincia de Leyte, presentï¿½ anoche cargos criminales contra los dueï¿½os, el capitï¿½n y la tripulaciï¿½n, de acuerdo con GMA</description>
+    </item>
+    <item>
+      <title>Video: Tiburï¿½n blanco ataca jaula de buzos en Sudï¿½frica</title>
+      <link>http://www.eluniversal.com.mx/el-mundo/2015/video-tiburon-blanco-ataca-jaula-de-buzos-en-sudafrica-1111818.html</link>
+      <guid>http://www.eluniversal.com.mx/el-mundo/2015/video-tiburon-blanco-ataca-jaula-de-buzos-en-sudafrica-1111818.html</guid>
+      <pubDate>2015-07-04 00:28:00</pubDate>
+      <description>El tiburï¿½n arremetiï¿½ contra la jaula en la que se protegï¿½a Hillary Rae Petroski quien captï¿½ con su cï¿½mara el momento del ataque</description>
+    </item>
+  </channel>
+</rss>
+

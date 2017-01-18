@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="./Master.xhtml">
+            <ui:define name="top">
+            <h1><h:outputText value="Agregar Materias a Carrera"/></h1>
+        </ui:define>
+        <ui:define name="left">
+             <h2>Instituto Tecnologico de Oaxaca</h2>
+        </ui:define>
+         <ui:define name="content">
+        <f:view>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputLabel value="Idcm:" for="idcm" />
+                    <h:inputText id="idcm" value="#{tutoriaAdm.matCarr.idcm}" title="Idcm" required="false" readonly="true"/>
+                    <h:outputLabel value="Idcarrera:" for="idcarrera" />
+                    <h:inputText id="idcarrera" value="#{tutoriaAdm.matCarr.idcarrera}" title="Idcarrera" readonly="true"/>
+                    <h:outputLabel value="Idmateria:" for="idmateria" />
+                    <h:selectOneMenu id="idmateria" value="#{tutoriaAdm.matCarr.idmateria}" title="Idmateria" required="true" requiredMessage="The Idmateria field is required.">
+                        <f:selectItems value="#{tutoriaAdm.matDisp}"/>
+                    </h:selectOneMenu>
+                    <h:outputLabel value="Semestre:" for="semestre" />
+                    <h:inputText id="semestre" value="#{tutoriaAdm.matCarr.semestre}" title="Semestre">
+                        <f:validateLongRange minimum="1" maximum="10"></f:validateLongRange>    
+                    </h:inputText>    
+                </h:panelGrid>
+                <h:commandButton value="Agregar" action="buscar" actionListener="#{tutoriaAdm.agregarMateria}"/>
+                <a href="http://localhost:8080/Tutoria-war/">Indice</a>
+                
+            </h:form>
+        </f:view>
+         </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

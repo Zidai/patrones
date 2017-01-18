@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="fabrica">
+  <ClassDiagramComponents>
+    <Class name="MarcoJ" package="fabrica" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="package"/>
+        <Constructor visibility="package">
+          <Argument type="String" name="s"/>
+          <Argument type="int" name="l"/>
+          <Argument type="int" name="a"/>
+          <Argument type="char" name="b"/>
+          <Argument type="char" name="f"/>
+          <Argument type="ArrayList" name="ele"/>
+          <Argument type="ArrayList" name="co"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="definirla" returnType="void" visibility="package"/>
+        <Method name="mostrarla" returnType="void" visibility="package"/>
+      </Methods>
+    </Class>
+    <Class name="PanelJ" package="fabrica" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="package"/>
+        <Constructor visibility="package">
+          <Argument type="String" name="s"/>
+          <Argument type="int" name="l"/>
+          <Argument type="int" name="a"/>
+          <Argument type="char" name="b"/>
+          <Argument type="char" name="f"/>
+          <Argument type="ArrayList" name="ele"/>
+          <Argument type="ArrayList" name="co"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="definirla" returnType="void" visibility="package"/>
+        <Method name="mostrarla" returnType="void" visibility="package"/>
+      </Methods>
+    </Class>
+    <Class name="MarcoC" package="fabrica" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="package"/>
+        <Constructor visibility="package">
+          <Argument type="String" name="s"/>
+          <Argument type="int" name="l"/>
+          <Argument type="int" name="a"/>
+          <Argument type="char" name="b"/>
+          <Argument type="char" name="f"/>
+          <Argument type="ArrayList" name="ele"/>
+          <Argument type="ArrayList" name="co"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="definirla" returnType="void" visibility="package"/>
+        <Method name="mostrarla" returnType="void" visibility="package"/>
+      </Methods>
+    </Class>
+    <Class name="ProgramaJ" package="fabrica" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="crearVentana" returnType="Ventana" visibility="protected">
+          <Argument type="String" name="t"/>
+        </Method>
+        <Method name="iniciar" returnType="Ventana" visibility="public">
+          <Argument type="Ventana" name="v"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ProgramaC" package="fabrica" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="crearVentana" returnType="Ventana" visibility="protected">
+          <Argument type="String" name="t"/>
+        </Method>
+        <Method name="iniciar" returnType="Ventana" visibility="public">
+          <Argument type="Ventana" name="v"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Programa" package="fabrica" visibility="public" isAbstract="true" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="crearVentana" returnType="Ventana" visibility="protected" isAbstract="true">
+          <Argument type="String" name="t"/>
+        </Method>
+        <Method name="iniciar" returnType="Ventana" visibility="public" isAbstract="true">
+          <Argument type="Ventana" name="v"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="PanelC" package="fabrica" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields/>
+      <Constructors>
+        <Constructor visibility="package"/>
+        <Constructor visibility="package">
+          <Argument type="String" name="s"/>
+          <Argument type="int" name="l"/>
+          <Argument type="int" name="a"/>
+          <Argument type="char" name="b"/>
+          <Argument type="char" name="f"/>
+          <Argument type="ArrayList" name="ele"/>
+          <Argument type="ArrayList" name="co"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="definirla" returnType="void" visibility="package"/>
+        <Method name="mostrarla" returnType="void" visibility="package"/>
+      </Methods>
+    </Class>
+    <Class name="Ventana" package="fabrica" visibility="public" isAbstract="true" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="largo" type="int" visibility="private"/>
+        <Field name="ancho" type="int" visibility="private"/>
+        <Field name="borde" type="char" visibility="private"/>
+        <Field name="fondo" type="char" visibility="private"/>
+        <Field name="elementos" type="ArrayList" visibility="private"/>
+        <Field name="controles" type="ArrayList" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="definirla" returnType="void" visibility="package" isAbstract="true"/>
+        <Method name="mostrarla" returnType="void" visibility="package" isAbstract="true"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <IsRelation name="is" source="fabrica.MarcoJ" target="fabrica.Ventana"/>
+    <IsRelation name="is" source="fabrica.PanelJ" target="fabrica.Ventana"/>
+    <IsRelation name="is" source="fabrica.ProgramaJ" target="fabrica.Programa"/>
+    <IsRelation name="is" source="fabrica.MarcoC" target="fabrica.Ventana"/>
+    <UseRelation source="fabrica.ProgramaC" target="fabrica.Ventana" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="fabrica.Programa" target="fabrica.Ventana" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="fabrica.ProgramaJ" target="fabrica.Ventana" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="fabrica.ProgramaC" target="fabrica.Programa"/>
+    <IsRelation name="is" source="fabrica.PanelC" target="fabrica.Ventana"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

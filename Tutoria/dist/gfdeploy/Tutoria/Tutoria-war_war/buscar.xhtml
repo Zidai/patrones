@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+    <h:head>
+        <title>Buscar</title>
+    </h:head>
+    <h:body>
+        <ui:composition template="./Master.xhtml">
+        <ui:define name="top">
+                 <h1>Buscar Carreras</h1>    
+        </ui:define>
+        <ui:define name="left">
+                <h2>Instituto Tecnologico de Oaxaca</h2>
+        </ui:define>
+        <ui:define name="content">
+        <f:view>
+            <h:form>
+                <h:outputLabel value="idCarrera:" for="idcarrera"/>
+                <h:selectOneMenu id="idcarrera" value="#{tutoriaAdm.carrera.idcarrera}"  valueChangeListener="#{tutoriaAdm.cambio}" onchange="submit()">
+                        <f:selectItems value="#{tutoriaAdm.ids}"/>
+                </h:selectOneMenu>
+            <br/>
+                <h:outputLabel value="Nombre:" for="nombre"/>
+                <h:inputText id="nombre" value="#{tutoriaAdm.carrera.nombre}" title="Nombre" readonly="true"/>
+                <br/>
+                <h:outputLabel value="Creditos:" for="creditos"/>
+                <h:inputText id="creditos" value="#{tutoriaAdm.carrera.creditos}" title="Creditos" readonly="true"/>
+                <br/>
+                <br/>
+                <h:outputLabel value="Materias de la carrera:" for="materi"/>
+                <!-->
+                <h:selectOneListbox id="materi">
+                    <f:selectItems value="#{tutoriaAdm.materiasAux}" var="it" itemLabel="#{it.nombre}"/>
+                    <f:selectItems value="#{tutoriaAdm.mateAux}"/>
+                </h:selectOneListbox>
+                <-->
+                <h:selectOneListbox id="materi">
+                    <f:selectItems value="#{tutoriaAdm.mateAux}"/>
+                </h:selectOneListbox>
+                <br/>
+                <br/>
+                <h:commandButton value="Cancelar" action="buscar" actionListener="#{tutoriaAdm.cancelSearch}"/>
+                <h:commandButton value="Editar" action="editar" readonly="#{tutoriaAdm.edit}"/>
+                <h:commandButton value="Eliminar" action="buscar" actionListener="#{tutoriaAdm.eliminar}"/>
+                <h:commandButton value="Carreras" action="Carreras" actionListener="#{tutoriaAdm.crearCarreras}"/>
+                <h:commandButton value="Add Materias" action="materiaCarrera" readonly="#{tutoriaAdm.edit}" actionListener="#{tutoriaAdm.crearMatCarr}"/>
+                <h:commandButton value="Index" action="index"/>
+                <br></br>
+                <br></br>
+                <h:messages id="mMatCad" style="color:white;background:firebrick"/>
+                
+                
+            </h:form>
+        </f:view>
+        </ui:define>
+        </ui:composition>
+    </h:body>
+</html>
+

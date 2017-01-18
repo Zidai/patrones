@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="ObservadorDeportes" package="proyectopatrones" visibility="public" xPosition="656.0" yPosition="323.0">
+      <Fields>
+        <Field name="datos" type="Sujeto" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="Sujeto" name="s"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actualizar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Midleware" package="proyectopatrones" visibility="public" xPosition="41.0" yPosition="269.0">
+      <Fields>
+        <Field name="observadores" type="ArrayList&lt;Observador&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package"/>
+      </Constructors>
+      <Methods>
+        <Method name="registrarObservador" returnType="void" visibility="public">
+          <Argument type="Observador" name="O"/>
+        </Method>
+        <Method name="removerObservador" returnType="void" visibility="public">
+          <Argument type="Observador" name="O"/>
+        </Method>
+        <Method name="notificarObservadores" returnType="void" visibility="public">
+          <Argument type="int" name="inte"/>
+        </Method>
+        <Method name="insertarADB" returnType="void" visibility="public">
+          <Argument type="String" name="fi"/>
+          <Argument type="int" name="interes"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ObservadorNoticias" package="proyectopatrones" visibility="public" xPosition="380.0" yPosition="323.0">
+      <Fields>
+        <Field name="datos" type="Sujeto" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="Sujeto" name="s"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actualizar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ObservadorTecnologia" package="proyectopatrones" visibility="public" xPosition="895.0" yPosition="323.0">
+      <Fields>
+        <Field name="datos" type="Sujeto" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="Sujeto" name="s"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actualizar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Sujeto" package="proyectopatrones" visibility="public" xPosition="59.0" yPosition="43.0">
+      <Methods>
+        <Method name="registrarObservador" returnType="void" visibility="public">
+          <Argument type="Observador" name="O"/>
+        </Method>
+        <Method name="removerObservador" returnType="void" visibility="public">
+          <Argument type="Observador" name="O"/>
+        </Method>
+        <Method name="notificarObservadores" returnType="void" visibility="public">
+          <Argument type="int" name="i"/>
+        </Method>
+      </Methods>
+    </Interface>
+    <Interface name="Observador" package="proyectopatrones" visibility="public" xPosition="439.0" yPosition="43.0">
+      <Methods>
+        <Method name="actualizar" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="proyectopatrones.Midleware" target="proyectopatrones.Sujeto"/>
+    <HasRelation name="observadores" source="proyectopatrones.Midleware" target="proyectopatrones.Observador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Observador&gt;"/>
+    <HasRelation name="datos" source="proyectopatrones.ObservadorNoticias" target="proyectopatrones.Sujeto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="proyectopatrones.Midleware" target="proyectopatrones.Observador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="datos" source="proyectopatrones.ObservadorDeportes" target="proyectopatrones.Sujeto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="proyectopatrones.Sujeto" target="proyectopatrones.Observador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="proyectopatrones.ObservadorTecnologia" target="proyectopatrones.Observador"/>
+    <HasRelation name="datos" source="proyectopatrones.ObservadorTecnologia" target="proyectopatrones.Sujeto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="proyectopatrones.ObservadorDeportes" target="proyectopatrones.Observador"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="proyectopatrones.ObservadorNoticias" target="proyectopatrones.Observador"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

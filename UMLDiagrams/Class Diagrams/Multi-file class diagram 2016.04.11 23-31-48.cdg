@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="ObservadorDeportes" package="proyectopatrones" visibility="public" xPosition="20.0" yPosition="301.0">
+      <Fields>
+        <Field name="datos" type="Sujeto" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="Sujeto" name="s"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actualizar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ObservadorNoticias" package="proyectopatrones" visibility="public" xPosition="273.0" yPosition="301.0">
+      <Fields>
+        <Field name="datos" type="Sujeto" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="Sujeto" name="s"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actualizar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ObservadorTecnologia" package="proyectopatrones" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="datos" type="Sujeto" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="Sujeto" name="s"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actualizar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Midleware" package="proyectopatrones" visibility="public" xPosition="920.0" yPosition="222.0">
+      <Fields>
+        <Field name="observadores" type="ArrayList&lt;Observador&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package"/>
+      </Constructors>
+      <Methods>
+        <Method name="registrarObservador" returnType="void" visibility="public">
+          <Argument type="Observador" name="O"/>
+        </Method>
+        <Method name="removerObservador" returnType="void" visibility="public">
+          <Argument type="Observador" name="O"/>
+        </Method>
+        <Method name="notificarObservadores" returnType="void" visibility="public">
+          <Argument type="int" name="inte"/>
+        </Method>
+        <Method name="insertarADB" returnType="void" visibility="public">
+          <Argument type="String" name="fi"/>
+          <Argument type="int" name="interes"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FrameObservador" package="proyectopatrones" visibility="public" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="ruta" type="String" visibility="private"/>
+        <Field name="index" type="int" visibility="private"/>
+        <Field name="mi" type="Midleware" visibility="package"/>
+        <Field name="dep" type="Observador" visibility="package"/>
+        <Field name="not" type="Observador" visibility="package"/>
+        <Field name="tec" type="Observador" visibility="package"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jComboBox1" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jComboBox1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="Observador" package="proyectopatrones" visibility="public" xPosition="115.0" yPosition="77.0">
+      <Methods>
+        <Method name="actualizar" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+    <Interface name="Sujeto" package="proyectopatrones" visibility="public" xPosition="490.0" yPosition="20.0">
+      <Methods>
+        <Method name="registrarObservador" returnType="void" visibility="public">
+          <Argument type="Observador" name="O"/>
+        </Method>
+        <Method name="removerObservador" returnType="void" visibility="public">
+          <Argument type="Observador" name="O"/>
+        </Method>
+        <Method name="notificarObservadores" returnType="void" visibility="public">
+          <Argument type="int" name="i"/>
+        </Method>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="proyectopatrones.Sujeto" target="proyectopatrones.Observador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="dep" source="proyectopatrones.FrameObservador" target="proyectopatrones.Observador" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="datos" source="proyectopatrones.ObservadorDeportes" target="proyectopatrones.Sujeto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="mi" source="proyectopatrones.FrameObservador" target="proyectopatrones.Midleware" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tec" source="proyectopatrones.FrameObservador" target="proyectopatrones.Observador" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="not" source="proyectopatrones.FrameObservador" target="proyectopatrones.Observador" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="datos" source="proyectopatrones.ObservadorTecnologia" target="proyectopatrones.Sujeto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="observadores" source="proyectopatrones.Midleware" target="proyectopatrones.Observador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Observador&gt;"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="proyectopatrones.Midleware" target="proyectopatrones.Sujeto"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="proyectopatrones.ObservadorTecnologia" target="proyectopatrones.Observador"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="proyectopatrones.ObservadorNoticias" target="proyectopatrones.Observador"/>
+    <UseRelation source="proyectopatrones.Midleware" target="proyectopatrones.Observador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="datos" source="proyectopatrones.ObservadorNoticias" target="proyectopatrones.Sujeto" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="proyectopatrones.ObservadorDeportes" target="proyectopatrones.Observador"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

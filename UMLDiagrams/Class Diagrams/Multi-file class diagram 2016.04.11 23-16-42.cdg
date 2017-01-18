@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="GetConnection" package="proyectopatrones" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="driver" type="Connection" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+      </Constructors>
+      <Methods>
+        <Method name="getConnection" returnType="Connection" visibility="public" isStatic="true"/>
+      </Methods>
+    </Class>
+    <Class name="CrearXML" package="proyectopatrones" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="ar"/>
+        </Method>
+        <Method name="getBody" returnType="Element" visibility="public"/>
+        <Method name="getDeportes" returnType="Document" visibility="public"/>
+        <Method name="getTecnologia" returnType="Document" visibility="public"/>
+        <Method name="getNoticias" returnType="Document" visibility="public"/>
+        <Method name="getItem" returnType="Element" visibility="public">
+          <Argument type="String" name="t"/>
+          <Argument type="String" name="l"/>
+          <Argument type="String" name="g"/>
+          <Argument type="String" name="p"/>
+          <Argument type="String" name="d"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

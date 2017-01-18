@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Multi-file class diagram">
+  <ClassDiagramComponents>
+    <Class name="ObservadorDeportes" package="proyectopatrones" visibility="public" xPosition="32.0" yPosition="321.0">
+      <Fields>
+        <Field name="datos" type="Sujeto" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="Sujeto" name="s"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actualizar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ObservadorNoticias" package="proyectopatrones" visibility="public" xPosition="276.0" yPosition="321.0">
+      <Fields>
+        <Field name="datos" type="Sujeto" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="Sujeto" name="s"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actualizar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ObservadorTecnologia" package="proyectopatrones" visibility="public" xPosition="520.0" yPosition="321.0">
+      <Fields>
+        <Field name="datos" type="Sujeto" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="package">
+          <Argument type="Sujeto" name="s"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actualizar" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Interface name="Observador" package="proyectopatrones" visibility="public" xPosition="245.0" yPosition="20.0">
+      <Methods>
+        <Method name="actualizar" returnType="void" visibility="public"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="proyectopatrones.ObservadorDeportes" target="proyectopatrones.Observador"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="proyectopatrones.ObservadorTecnologia" target="proyectopatrones.Observador"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="proyectopatrones.ObservadorNoticias" target="proyectopatrones.Observador"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
